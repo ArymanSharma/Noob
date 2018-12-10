@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<div>
+	<form method="POST" action="">
+		<table>
+			<tr>
+				<th>CAB ID</th>
+				<th>SOURCE</th>
+				<th>DESTINATION</th>
+				<th>START DATE</th>
+				<th>START TIME</th>
+				<th>STOP DATE</th>
+				<th>STOP tIME</th>
+				<th>VACANCIES</th>
+				<th>FARE</th>
+			</tr>
+			{%for i in result%}
+				<tr>
+					<td>{{i['cabshareid']}}</td>
+					<td>{{i['source']}}</td>
+					<td>{{i['destiation']}}</td>
+					<td>{{i['start_date']}}</td>
+					<td>{{i['start_time']}}</td>
+					<td>{{i['stop_date']}}</td>
+					<td>{{i['stop_time']}}</td>
+					<td>{{i['vacancies']}}</td>
+					<td>{{i['fare']}}</td>
+					<td>
+						<form method="POST" action="">
+							<div>
+								Updated Vacancies <input type="number" name="seat" placeholder="No of vacancies..">
+							</div>
+						</form>
+					</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</form>
+</div>
