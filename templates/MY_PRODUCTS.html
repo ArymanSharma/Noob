@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<div>
+	<form methods="GET" action="">
+		<table>
+			<tr>
+				<th>PRODUCT ID</th>
+				<th>PRODUCT NAME</th>
+				<th>CATEGORY</th>
+				<th>PRICE</th>
+				<th>DETAILS</th>
+				<th>CITY</th>
+				<th>CONTACT DETAILS</th>
+			</tr>
+			{% for i in myads %}
+				<tr>
+					<td>{{i['product_id']}}</td>
+					<td>{{i['product_name']}}</td>
+					<td>{{i['category']}}</td>
+					<td>{{i['price']}}</td>
+					<td>{{i['details']}}</td>
+					<td>{{i['city']}}</td>
+					<td>{{i['contact_details']}}</td>
+					<td>
+						<form method="POST" action="">
+							<div>
+								<button type="submit" name="productid" value="{{i['product_id']}}">DELETE</button>
+							</div>
+						</form>
+					</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</form>
+</div>

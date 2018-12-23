@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<form method="POST" action="">
+	<br>
+		<div>
+			<select name= source method="GET" action="">
+    			{% for source in sources %}
+    				<option value= "{{source}}" SELECTED>{{source}}</option>
+    			{% endfor %}
+			</select>
+		</div>
+	</br>
+	<br>
+		<div>
+			<select name= destination method="GET" action="">
+    			{% for colour in colours %}
+    				<option value= "{{destination}}" SELECTED>{{destination}}</option>
+    			{% endfor %}
+			</select>
+		</div>
+	</br>
+	<br>
+	<div>
+		Starting time <input type="date" name="start"/> 
+	</div>
+	</br>
+	<br>
+	<div>
+		<input type="submit" value="SEARCH">
+	</div>
+	</br>
+</form>
